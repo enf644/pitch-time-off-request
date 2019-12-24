@@ -1,0 +1,643 @@
+AxForm:
+  guid: 954059c4-0727-4d20-8d6b-6a66f3fce0e5
+  name: Time Off Request
+  db_name: PitchTimeOffRequest
+  parent: 0652a73b-a4ab-4351-b34d-b72ad3c61e68
+  position: 0
+  tom_label: '{{guid}}'
+  icon: bed
+AxFields:
+- guid: bc7fc4b3-f849-478b-95d4-953932506e20
+  name: Default tab
+  db_name:
+  position: 0
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 39d04689-eb74-428b-8171-f444c158e01f
+  name: Registration number
+  db_name: axNum
+  position: 0
+  options_json: '{"comparator":"string"}'
+  private_options_json: '{"algorithm":"# first value of counter\nif not ax.counter:\n    ax.counter=1\n#
+    ax.value will be registration number\nax.value=f\"{ax.counter}\"\n# Increment
+    counter\nax.counter=str(int(ax.counter) + 1)","counterKey":"954059c4-0727-4d20-8d6b-6a66f3fce0e5"}'
+  field_type_tag: AxNum
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: 06b69f2a-34c5-4479-b943-6431b509ef38
+  name: Current State
+  db_name: rowState
+  position: 1
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxState
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+  name: Request date
+  db_name: requestDate
+  position: 2
+  options_json: '{"mask":"+1 (###) ###-##-##","defaultNow":true}'
+  private_options_json:
+  field_type_tag: AxDate
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+  name: Employee
+  db_name: employee
+  position: 3
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxAuthor
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: 4c7ad2ac-e3cb-468e-b705-c8faa9fc91c3
+  name: Department head
+  db_name: depHead
+  position: 4
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxSingleUser
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: 1c80326f-1f85-4889-8d75-1f2b407eadb2
+  name: Available leave balance
+  db_name: balance
+  position: 5
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxInteger
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: 807b600c-1e6a-4798-9c50-ba8202522c5f
+  name: Reason for leave
+  db_name: reason
+  position: 6
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxText
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: c92901ff-4528-485d-9c21-69199ad2e738
+  name: Leave type
+  db_name: type
+  position: 7
+  options_json: '{"items":"[\n    {\n        \"text\": \"Sick\",\n        \"value\":
+    \"1\"\n    },\n    {\n        \"text\": \"Personal\",\n        \"value\": \"2\"\n    },\n    {\n        \"text\":
+    \"Vacation\",\n        \"value\": \"3\"\n    }\n]"}'
+  private_options_json:
+  field_type_tag: AxChoise
+  is_tab: false
+  is_required: true
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: b7ac5e3b-a033-4214-88bd-4f15322d96ef
+  name: Total leave days
+  db_name: total
+  position: 8
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxInteger
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: cffa884a-c2ff-4e6d-b1c8-c93f56ef3d75
+  name: Leave Details
+  db_name: details
+  position: 9
+  options_json: '{"isWholeRow":true,"height":400,"inline_height":398,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
+    existing","form":"PitchTimeOffRequestDay","grid":"Default","inline_grid":"Default"}'
+  private_options_json:
+  field_type_tag: Ax1tomTable
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: afa0002b-dd6c-4517-9f4a-920bcbcdc024
+  name: Tentative joining date
+  db_name: tentativeDate
+  position: 10
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxDate
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+- guid: 68178d3e-22c6-4090-a502-3965440e8689
+  name: Medical certificate
+  db_name: files
+  position: 11
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxFiles
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: bc7fc4b3-f849-478b-95d4-953932506e20
+AxMetrics:
+- guid: b029b0b7-4125-4e86-8339-8ea688f71017
+  key: 954059c4-0727-4d20-8d6b-6a66f3fce0e5
+  value: '2'
+AxGrids:
+- guid: ce23cb24-014c-4187-b2ab-587b68473316
+  name: All requests
+  db_name: All
+  position: 1
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0,"widths":{"employee":176,"requestDate":174}}'
+  is_default_view: true
+  columns:
+  - guid: dff1e8b2-c247-4adf-919b-f844390f06f4
+    position: 0
+    options_json:
+    field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+    column_type: columns
+    aggregation_type:
+  - guid: 10953c4e-0e64-4ac9-82bf-a13ba29497d5
+    position: 1
+    options_json:
+    field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+    column_type: columns
+    aggregation_type:
+  - guid: 9394b6c2-50b5-40e0-8039-dccd0a78fd98
+    position: 2
+    options_json:
+    field_guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+    column_type: columns
+    aggregation_type:
+  - guid: 68fecb3a-111d-4604-97b8-a622d7d2b79f
+    position: 4
+    options_json:
+    field_guid: 06b69f2a-34c5-4479-b943-6431b509ef38
+    column_type: columns
+    aggregation_type:
+- guid: fb40d38d-1a12-4339-90ac-9bd2f9deb7ac
+  name: My requests
+  db_name: My
+  position: 2
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0}'
+  is_default_view: false
+  columns:
+  - guid: 0180fd9e-d073-468a-b8b1-9b162b165aa9
+    position: 0
+    options_json:
+    field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+    column_type: columns
+    aggregation_type:
+  - guid: 137c02cc-f7b1-4727-90a5-b3799da62025
+    position: 1
+    options_json:
+    field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+    column_type: columns
+    aggregation_type:
+  - guid: 43712c2e-0743-4b5d-9b14-cdee8f9f4ebd
+    position: 2
+    options_json:
+    field_guid: 06b69f2a-34c5-4479-b943-6431b509ef38
+    column_type: columns
+    aggregation_type:
+- guid: b566255d-5c6d-4f7e-ab22-b7380540c767
+  name: Department Head Approval
+  db_name: Head
+  position: 3
+  options_json: '{"enableQuickSearch":true,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":false,"rowHeight":45,"pinned":0,"enableTitle":true}'
+  is_default_view: false
+  columns:
+  - guid: 204bed50-66bf-4d74-af83-f509e178a7bd
+    position: 0
+    options_json:
+    field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+    column_type: columns
+    aggregation_type:
+  - guid: 4a57c33d-cf78-4871-a429-be598d1559c0
+    position: 1
+    options_json:
+    field_guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+    column_type: columns
+    aggregation_type:
+  - guid: ca5869fc-3729-4400-9e05-6d02b7ebc7ef
+    position: 2
+    options_json:
+    field_guid: 4c7ad2ac-e3cb-468e-b705-c8faa9fc91c3
+    column_type: columns
+    aggregation_type:
+  - guid: d83c37d1-3138-4780-8b69-e0f8ac235f01
+    position: 3
+    options_json:
+    field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+    column_type: columns
+    aggregation_type:
+- guid: 5b3f2b2c-a236-4eac-839a-11eed3606746
+  name: Payroll Processing
+  db_name: Payroll
+  position: 4
+  options_json: '{"enableQuickSearch":true,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":false,"rowHeight":45,"pinned":0,"enableTitle":true}'
+  is_default_view: false
+  columns:
+  - guid: cd26154e-ff1d-4a48-ba51-d78ecc8c846f
+    position: 0
+    options_json:
+    field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+    column_type: columns
+    aggregation_type:
+  - guid: 7efb6f36-8308-4811-87a9-976d5b8aa904
+    position: 1
+    options_json:
+    field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+    column_type: columns
+    aggregation_type:
+  - guid: 5a0098d6-75e7-4209-88d1-a2a4272f4f1d
+    position: 2
+    options_json:
+    field_guid: 4c7ad2ac-e3cb-468e-b705-c8faa9fc91c3
+    column_type: columns
+    aggregation_type:
+  - guid: 3a0a6f88-39b8-40b2-81ec-122c6460e07f
+    position: 3
+    options_json:
+    field_guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+    column_type: columns
+    aggregation_type:
+AxRoles:
+- guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  name: All users
+  icon:
+  is_dynamic: false
+- guid: c065d93d-11b1-405c-b1e6-0971f38f02d9
+  name: Employee
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: 10f9bd11-1ef4-41ac-b915-e2301724a219
+  name: HR department
+  icon:
+  is_dynamic: false
+- guid: 20ed1979-98f9-4fd2-a975-87c619119819
+  name: Department head
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: 608aec16-1a6c-4776-ac38-77019725b668
+  name: Department heads
+  icon:
+  is_dynamic: false
+AxStates:
+- guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  name: Start
+  is_start: true
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: -148.0
+  roles:
+  - 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+- guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  name: Adding dates
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: 0.0
+  roles:
+  - 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  - c065d93d-11b1-405c-b1e6-0971f38f02d9
+- guid: 7b50804b-a7bc-46b2-a96d-bde178eb4b5c
+  name: Deleted
+  is_start: false
+  is_deleted: true
+  is_all: false
+  x: 354.0
+  y: 315.0
+  roles: []
+- guid: 06efa3d6-4ce4-4906-8a82-0ebb9290fce8
+  name: All
+  is_start: false
+  is_deleted: false
+  is_all: true
+  x: 357.0
+  y: 478.0
+  roles: []
+- guid: 7ae82bc2-7b2a-4f44-9bac-ec97ed022f69
+  name: Archive
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 7.703125
+  y: 457.5
+  roles:
+  - 10f9bd11-1ef4-41ac-b915-e2301724a219
+- guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  name: Department Head Approval
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 2.703125
+  y: 140.5
+  roles:
+  - 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  - 608aec16-1a6c-4776-ac38-77019725b668
+- guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  name: Payroll Processing
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 5.703125
+  y: 302.5
+  roles:
+  - 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  - 10f9bd11-1ef4-41ac-b915-e2301724a219
+AxActions:
+- guid: 17c9cfdc-864d-40b7-982e-24e18c773eb0
+  name: Create request
+  db_name:
+  from_state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  to_state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+- guid: fdf4b6a8-16f2-4aba-a5a3-9d4bf498470e
+  name: Update
+  db_name:
+  from_state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  to_state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles: []
+- guid: cd7485ce-4178-4f19-999e-eb42f18976a2
+  name: Update
+  db_name:
+  from_state_guid: 7ae82bc2-7b2a-4f44-9bac-ec97ed022f69
+  to_state_guid: 7ae82bc2-7b2a-4f44-9bac-ec97ed022f69
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles: []
+- guid: 6b5e0504-e8af-4389-a398-8f9a6446c25b
+  name: Cancel request
+  db_name:
+  from_state_guid: 06efa3d6-4ce4-4906-8a82-0ebb9290fce8
+  to_state_guid: 7ae82bc2-7b2a-4f44-9bac-ec97ed022f69
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - c065d93d-11b1-405c-b1e6-0971f38f02d9
+  - 10f9bd11-1ef4-41ac-b915-e2301724a219
+- guid: a1d56686-a622-43a5-b3d0-f810ab1ea407
+  name: Update
+  db_name:
+  from_state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  to_state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 20ed1979-98f9-4fd2-a975-87c619119819
+- guid: 357b60b1-e227-4611-a2c6-9080ebaa1c0a
+  name: Update
+  db_name:
+  from_state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  to_state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 10f9bd11-1ef4-41ac-b915-e2301724a219
+- guid: 1ae2c568-7976-4d0f-9213-848753874764
+  name: Approve with department head
+  db_name:
+  from_state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  to_state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - c065d93d-11b1-405c-b1e6-0971f38f02d9
+- guid: 1158659b-c497-4768-a51d-e5569595b148
+  name: Approve
+  db_name:
+  from_state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  to_state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 20ed1979-98f9-4fd2-a975-87c619119819
+- guid: dd1fac75-ab25-4715-bff0-877706356625
+  name: Decline
+  db_name:
+  from_state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  to_state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  confirm_text:
+  close_modal: true
+  icon:
+  radius: -171.62668140079558
+  roles:
+  - 20ed1979-98f9-4fd2-a975-87c619119819
+- guid: d9f9db2d-7e95-4d4d-9b13-fd04a31d9308
+  name: Decline
+  db_name:
+  from_state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  to_state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  confirm_text:
+  close_modal: true
+  icon:
+  radius: 203.64485411360144
+  roles:
+  - 10f9bd11-1ef4-41ac-b915-e2301724a219
+- guid: fd6ff1c0-754d-4870-b60f-1163a7471fb8
+  name: Processed
+  db_name:
+  from_state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  to_state_guid: 7ae82bc2-7b2a-4f44-9bac-ec97ed022f69
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 10f9bd11-1ef4-41ac-b915-e2301724a219
+AxRoleFieldPermission:
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+  read: false
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: 4c7ad2ac-e3cb-468e-b705-c8faa9fc91c3
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+  read: false
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: 1c80326f-1f85-4889-8d75-1f2b407eadb2
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: c92901ff-4528-485d-9c21-69199ad2e738
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: 807b600c-1e6a-4798-9c50-ba8202522c5f
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: cffa884a-c2ff-4e6d-b1c8-c93f56ef3d75
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: b7ac5e3b-a033-4214-88bd-4f15322d96ef
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: afa0002b-dd6c-4517-9f4a-920bcbcdc024
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: 68178d3e-22c6-4090-a502-3965440e8689
+  read: true
+  edit: true
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
+  field_guid: 06b69f2a-34c5-4479-b943-6431b509ef38
+  read: false
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  field_guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  field_guid: 4c7ad2ac-e3cb-468e-b705-c8faa9fc91c3
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  field_guid: 4c7ad2ac-e3cb-468e-b705-c8faa9fc91c3
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  field_guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  field_guid: 06b69f2a-34c5-4479-b943-6431b509ef38
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  field_guid: 06b69f2a-34c5-4479-b943-6431b509ef38
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  field_guid: 39d04689-eb74-428b-8171-f444c158e01f
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  field_guid: 42ccbbf3-80f3-4c11-8fa2-b6d427625a67
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  field_guid: 4c7ad2ac-e3cb-468e-b705-c8faa9fc91c3
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  field_guid: e6ab5364-f75b-4ec6-b844-f5f164f415ff
+  read: true
+  edit: false
+- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
+  state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  field_guid: 06b69f2a-34c5-4479-b943-6431b509ef38
+  read: true
+  edit: false
+- role_guid: 10f9bd11-1ef4-41ac-b915-e2301724a219
+  state_guid: 7ae82bc2-7b2a-4f44-9bac-ec97ed022f69
+  field_guid: None
+  read: true
+  edit: false
+- role_guid: c065d93d-11b1-405c-b1e6-0971f38f02d9
+  state_guid: 7660adb8-8f34-475e-a72e-03f7dc9f413f
+  field_guid: None
+  read: true
+  edit: true
+- role_guid: 608aec16-1a6c-4776-ac38-77019725b668
+  state_guid: d8360eb1-f1c6-4a2f-aaa0-03b1a1b0f00d
+  field_guid: None
+  read: true
+  edit: false
+- role_guid: 10f9bd11-1ef4-41ac-b915-e2301724a219
+  state_guid: 5c1b71f0-49c8-4fd1-9c8f-ae800c9bb208
+  field_guid: None
+  read: true
+  edit: false
