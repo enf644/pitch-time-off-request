@@ -154,7 +154,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 1f16ddcb-cdb2-4e83-a38f-41efd7aa9e2b
 - guid: 6e4eea71-a5a0-427d-9b17-17a1d195f548
@@ -165,7 +165,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles: []
 AxRoleFieldPermission:
 - role_guid: 1f16ddcb-cdb2-4e83-a38f-41efd7aa9e2b

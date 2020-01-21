@@ -1,5 +1,5 @@
 ax.query = f"""
-    SELECT <ax_fields> 
-    FROM "<ax_table>"
-    WHERE "axState"="Department Head Approval";
+    SELECT {ax.db_fields}
+    FROM "{ax.db_table}"
+    WHERE "axState"='Department Head Approval';
 """

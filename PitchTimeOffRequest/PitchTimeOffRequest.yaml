@@ -373,7 +373,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
 - guid: fdf4b6a8-16f2-4aba-a5a3-9d4bf498470e
@@ -384,7 +384,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles: []
 - guid: cd7485ce-4178-4f19-999e-eb42f18976a2
   name: Update
@@ -394,7 +394,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles: []
 - guid: 6b5e0504-e8af-4389-a398-8f9a6446c25b
   name: Cancel request
@@ -404,7 +404,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - c065d93d-11b1-405c-b1e6-0971f38f02d9
   - 10f9bd11-1ef4-41ac-b915-e2301724a219
@@ -416,7 +416,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 20ed1979-98f9-4fd2-a975-87c619119819
 - guid: 357b60b1-e227-4611-a2c6-9080ebaa1c0a
@@ -427,7 +427,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 10f9bd11-1ef4-41ac-b915-e2301724a219
 - guid: 1ae2c568-7976-4d0f-9213-848753874764
@@ -438,7 +438,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - c065d93d-11b1-405c-b1e6-0971f38f02d9
 - guid: 1158659b-c497-4768-a51d-e5569595b148
@@ -449,7 +449,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 20ed1979-98f9-4fd2-a975-87c619119819
 - guid: dd1fac75-ab25-4715-bff0-877706356625
@@ -460,7 +460,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius: -171.62668140079558
+  radius: -171.626681400796
   roles:
   - 20ed1979-98f9-4fd2-a975-87c619119819
 - guid: d9f9db2d-7e95-4d4d-9b13-fd04a31d9308
@@ -471,7 +471,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius: 203.64485411360144
+  radius: 203.644854113601
   roles:
   - 10f9bd11-1ef4-41ac-b915-e2301724a219
 - guid: fd6ff1c0-754d-4870-b60f-1163a7471fb8
@@ -482,7 +482,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 10f9bd11-1ef4-41ac-b915-e2301724a219
 AxRoleFieldPermission:
