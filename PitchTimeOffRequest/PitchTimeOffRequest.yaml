@@ -121,12 +121,13 @@ AxFields:
   is_required: false
   is_whole_row: false
   parent: bc7fc4b3-f849-478b-95d4-953932506e20
-- guid: cffa884a-c2ff-4e6d-b1c8-c93f56ef3d75
+- guid: 4dc8b7e4-9cec-4e1c-bf72-5b10b4fa1208
   name: Leave Details
   db_name: details
-  position: 9
-  options_json: '{"isWholeRow":true,"height":400,"inline_height":398,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
-    existing","form":"PitchTimeOffRequestDay","grid":"Default","inline_grid":"Default"}'
+  position: 10
+  options_json: '{"isWholeRow": true, "height": 400, "inline_height": 400, "enableFormModal":
+    true, "enableAddRelation": true, "addRelationLabel": "Add existing", "form": "PitchTimeOffRequestDay",
+    "grid": "Default", "inline_grid": "Default"}'
   private_options_json:
   field_type_tag: Ax1tomTable
   is_tab: false
@@ -136,7 +137,7 @@ AxFields:
 - guid: afa0002b-dd6c-4517-9f4a-920bcbcdc024
   name: Tentative joining date
   db_name: tentativeDate
-  position: 10
+  position: 11
   options_json: '{}'
   private_options_json:
   field_type_tag: AxDate
@@ -147,7 +148,7 @@ AxFields:
 - guid: 68178d3e-22c6-4090-a502-3965440e8689
   name: Medical certificate
   db_name: files
-  position: 11
+  position: 12
   options_json: '{}'
   private_options_json:
   field_type_tag: AxFiles
@@ -158,7 +159,7 @@ AxFields:
 AxMetrics:
 - guid: b029b0b7-4125-4e86-8339-8ea688f71017
   key: 954059c4-0727-4d20-8d6b-6a66f3fce0e5
-  value: '2'
+  value: '3'
 AxGrids:
 - guid: ce23cb24-014c-4187-b2ab-587b68473316
   name: All requests
@@ -519,11 +520,6 @@ AxRoleFieldPermission:
 - role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
   state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
   field_guid: 807b600c-1e6a-4798-9c50-ba8202522c5f
-  read: true
-  edit: true
-- role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
-  state_guid: 001ddd62-e612-480a-ace0-8f121cfac15e
-  field_guid: cffa884a-c2ff-4e6d-b1c8-c93f56ef3d75
   read: true
   edit: true
 - role_guid: 9ceeaeb1-b7f5-485f-83c5-f965b958cb08
